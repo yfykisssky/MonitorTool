@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/timecount"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="记时" />
+
+        <Button
+            android:id="@+id/fpscount"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="fps" />
+
+        <Button
+            android:id="@+id/cpu"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="cpu/内存" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/control"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="tag" />
+
+        <EditText
+            android:id="@+id/condition"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="time>?"
+            android:inputType="number"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/tagbnt"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="过滤" />
+
+        <Button
+            android:id="@+id/judge"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="筛选"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="重置" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="清除数据" />
+
+        <Button
+            android:id="@+id/cvs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="导出cvs" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
